@@ -1,0 +1,352 @@
+<!doctype html>
+<html lang="es">
+
+<!-- +++++ +++++ ++ HEAD SECTION ++ +++++ +++++ ++ -->
+<head>
+	<!-- metadata -->
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<meta name="description" content="MéxicoEn140 es una herramienta de visualización de los temás más relevantes discutidos en Twitter por un grupo de cuentas influyentes en la política mexicana.">
+	<meta name="author" content="@mecanosaurio (para Ethos, Laboratorio de Políticas Públicas).">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<!-- links to css -->
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="css/bootstrap-theme.min.css">
+	<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
+	<link rel="stylesheet" type="text/css" href="css/jquery.qtip.min.css">
+	<link rel="stylesheet" type="text/css" href="css/custombox.min.css">
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<!-- title and other visible data -->
+	<title>#MéxicoEn140 | Ethos | Laboratorio de Políticas Públicas </title>
+</head>
+
+
+
+<!-- +++++ +++++ ++ BODY SECTION ++ +++++ +++++ ++ -->
+<body>
+	
+    <!--  .. .. ... .. header SECT .. .. ... .. -->
+	<div class="row header">
+    	<!-- 1st column empty-->
+    	<div class="col-md-1"></div>
+    	<!-- 2nd column title-->
+     	<div class="col-md-8" >
+			<table style="width:100%; position:relative; top:0.2cm; left:0.3cm;" >
+  				<tr style="float: left">
+  					<td>
+  						<a class="titular">#MÉXICOen140 </a>
+  					</td>
+  					<td>
+  						<img src="data/logo_mx140.png" 
+  							class = "logo-mx" alt="logo-mx140" 
+  							height="80" width="95" 
+  							style="position:relative; bottom:0.3cm; left: 0.1cm;">
+  					</td>
+				</tr>
+			</table>
+    	</div>
+    	<!-- 3rd column corner logo-->			
+    	<div class="col-md-2" style="position:relative; top:0.5cm; ">
+    		<table style="width:100%" >
+  				<tr><td>
+  					<a href="#">
+					<img src="data/logo_ethos.png" 
+    					class="logo-ethos" alt="logo ethos" 
+    					width="120" height="180"
+    					style="position:relative; left:-0.6cm;">
+    				</a>
+    			</td></tr>
+			</table>
+    	</div>    	
+    	<div class="col-md-1"></div>
+    </div>
+
+
+	<!-- .. .. ... .. nav bar SECT .. .. ... .. -->		
+	<div class="row navigationbar">
+		<!-- 1st column empty-->
+    	<div class="col-md-1"></div>
+   		<!-- 2nd column nav bar-->
+    	<div class="col-md-8">
+    		<nav style="position:relative; bottom:1cm; left:0.5cm; height:10px;">
+				<a id="ltodo" class = "selec active" value="all" href="#">TODOS</a> | | |
+				<a id="lejec" class = "selec" value="mx140-ejecutivo" href="#">Poder EJECUTIVO</a> | | |
+				<a id="ldipu" class = "selec" value="mx140-diputados" href="#">DIPUTADOS</a> | | |
+				<a id="lsena" class = "selec" value="mx140-senadores" href="#">SENADORES</a> | | |
+				<a id="lgobe" class = "selec" value="mx140-gobernadores" href="#">GOBERNADORES</a> | | |
+				<a id="lopin" class = "selec" value="mx140-opinion"href="#">LÍDERES de OPINIÓN</a> | | |
+				<a id="lpri"  class = "selec" value="mx140-pri" href="#">PRI</a> | | |
+				<a id="lpan"  class = "selec" value="mx140-pan" href="#">PAN</a> | | |
+				<a id="lprd"  class = "selec" value="mx140-prd" href="#">PRD</a> | | |
+			</nav>
+    	</div>
+    	<div class="col-md-2"></div>   		
+    </div>
+	<!-- .. .. ... .. colorstrip ROW .. .. ... .. -->
+	<div class="row">
+   		<!-- just one column-->
+    	<div class="col-md-11" align="center" style="bottom:0.2cm;">
+   		    <div id="colorstrip" align="center"></div>
+    	</div>
+    </div>
+	<!-- .. .. ... .. hidden text ROW .. .. ... .. -->
+    <div class="row">
+    	<div class="col-md-1"></div>
+   		<div class="col-md-8">
+   		   	<div class="txtodo hidden">
+		   		Incluye las cuentas de todas las categorías
+   			</div>
+			<div class="txejec hidden">
+   				Cuentas institucionales de la presidencia, directores de instituciones, gobernadores y dependencias del gobierno
+			</div>
+			<div class="txdipu hidden">
+				Cuenta institucional de la cámara y cuentas personales de aquellos diputados activos
+			</div>
+   			<div class="txsena hidden">
+				Cuenta institucional de la cámara y cuentas personales de aquellos senadores activos
+		   	</div>
+			<div class="txgobe hidden">
+				Incluye la cuenta de cada uno de los Gobernadores de las 32 entidades federativas
+			</div>
+			<div class="txopin hidden">
+   				Cuentas institucionales de medios de comunicación, organizaciones de la sociedad civil e instituciones académicas
+			</div>
+   			<div class="txpri hidden">
+   				Cuentas institucionales y de personalidades destacadas del Partido Revolucionario Institucional
+		   	</div>
+			<div class="txpan hidden">
+				Cuentas institucionales y de personalidades destacadas del Partido Acción Nacional
+	   		</div>
+			<div class="txprd hidden">
+				Cuentas institucionales y de personalidades destacadas del Partido de la Revolución Democrática
+		   	</div>
+    	</div>
+    	<div class="col-md-2"></div>   		
+    </div>
+
+    <!-- .. .. ... .. MAIN chart SECTION .. .. ... .. -->
+	<div class="row mainchart">
+   		<!-- 1st column empty-->
+		<div class="col-md-1" style="position:relative; vertical-align: middle;"></div>
+    	<!-- 2nd column chart-->
+		<div class="col-md-7" style="position:relative; align: middle;  vertical-align: top;">
+		    <!-- .. .. ... .. chart SECT .. .. ... .. -->
+			<section id="chart">
+				<svg width="1000" height="650"></svg>
+			</section>
+		</div>
+		<!-- 3rd column legend table-->
+		<div class="col-md-3" style="position:relative; top:0.5cm; left:0.5cm; font-size:1.5em;">
+			<!-- .. .. ... .. legend SECT .. .. ... .. -->
+			<section id="legend">
+			<table>
+  				<tr> <!--button-check-->
+  					<td>
+						<div id="infoblock-check" style="position:relative; top:20px;">
+    						<a href="#" id="icon-check">
+    						<span class="glyphicon glyphicon-info-sign" style="color:white"></span>
+    						</a>
+    					</div>
+					</td>
+				</tr>
+  				<tr> <!--button-info-->
+  					<td>
+						<div id="infoblock-info" style="position:relative; top:40px;">
+    						<a href="#" id="icon-info">
+    						<span class="glyphicon glyphicon-hand-up" style="color:white"></span>
+    						</a>
+  						</div>
+  					</td>
+				</tr>
+  				<tr>  <!--b-none-->
+  					<td>
+  						<div >
+  						<a> </a>
+  						</div>
+  					</td>
+				</tr>
+  				<tr>  <!--button-metod-->
+  					<td>
+						<div id="infoblock-metod" style="position:relative; top:320px;">
+    						<a href="#" id="icon-metod">
+    						<span class="glyphicon glyphicon-cog text-metod" style="color:white"></span>
+    						</a>
+    						<a href="#" id="text-metod">
+    						<span>METODOLOGíA</span>
+    						</a>
+	 						</div>
+	 					</td>
+				</tr>
+			</table>
+			<p id="text-check" style="opacity: 0; z-index=1;">
+					#MÉXICOen140 es una herramienta que 
+					muestra qué están diciendo los 
+					tuiteros más influyentes del país.
+ 			</p>
+			<p  id="text-info" style="opacity: 0; z-index=1;">
+					Haz click en las distintas categorías
+					y descubre qué es lo más mencionado
+					por cada grupo de usuarios.
+ 			</p>
+		</div>
+		<div class="col-md-1" ></div>
+	</div>
+
+
+    <!-- .. .. ... .. footer SECT .. .. ... .. -->
+	<footer>
+	<hr width="85%" size="4">
+	<div class="row" style="padding: 0px">
+		<div class="col-md-1"></div>
+		<div class="col-md-5 foot1">
+			<span>(C) 2015 Todos los derechos reservados. <br>
+			Este es un proyecto de Ethos Laboratorio de Políticas Públicas <br>
+			en colaboración con <a href="http://overdriven-labs.ml" target="_blank" style="font-color: #A0A0A0; color: #A0A0A0">Overdriven Labs</a>.<br><br></span>
+		</div>
+		<div class="col-md-3"></div>
+		<div class="col-md-2 foot2">
+			<table style="width:100% text-align:right" >
+				<tr style="float: right">
+					<th><a href="https://www.facebook.com/ethoslaboratorio" target="_blank">
+ 						<img src="data/facebook-g.png" alt="f" height="30" margin-right="10px">  
+  					</a></th>
+  					<th><a href="https://twitter.com/ethoslabmx" target="_blank"><img src="data/twitter-g.png" alt="t" width="30" height="30">
+  					</a></th>
+  				</tr>
+  				<tr>
+    				<th><a class="link-eth" href="http://www.ethos.org.mx" target="_blank">www.ethos.org.mx</a>
+    				</th>
+				</tr>
+			</table>
+		</div>
+		<div class="col-md-1"></div>
+		<!--div class="col-md-1"></div-->
+	</div>
+	</footer>
+
+
+
+    <!-- .. .. ... .. hiden SECTION .. .. ... .. -->
+<div>
+    <!--tooltipcito--> 
+    <div>
+    	<span id="tooltip"></span>
+    </div>
+    <!--div>
+    <circle id="circe" r="1" stroke="black" stroke-width="2" fill="none"></circle>
+    </div-->
+
+    <!--ethos-modal-->
+  	<div id="modal-eth" class="modal-demo" style="display: none;">
+		<div class="modalclose" onclick="Custombox.close();">
+			<span><h5>X</h5></span>
+		</div>
+		<div class="modaltext-eth" >
+			<table style="width:100%" >
+  				<tr>
+  					<td width="85px">
+  						<a href="http://ethos.org.mx" target="_blank">
+							<img src="data/logo_ethos.png" 
+    							class="logo-ethos" alt="logo ethos" 
+    							width="85px" height="150px" 
+    							style="position: relative; left:-0.30cm;">
+    					</a>
+   						<a href="https://www.facebook.com/ethoslaboratorio" target="_blank">
+ 							<img src="data/facebook-g.png" 
+ 								alt="f" width="30" height="30" 
+ 								margin-top="1px">  
+  						</a>
+  						<a href="https://twitter.com/ethoslabmx" target="_blank">
+  							<img src="data/twitter-g.png" 
+  							alt="t" width="30" height="30">
+  						</a>
+    				</td>
+    				<td>
+    					<p align="justify">Ethos es un laboratorio de ideas (think tank) que transforma	investigaciones y experiencias en recomendaciones claras y acciones concretas de política pública que atienden los problemas más relevantes y principales retos para el <b>desarrollo y progreso de México y América Latina</b>.</p>
+    				</td>
+    			</tr>
+  				<tr>
+					<td>
+  					</td>
+    				<td>
+						<p>Nos especializamos en los siguientes temas:</p>
+    				</td>
+    			</tr>
+			</table>
+			<p align="center"><a href="#">Finanzas Públicas</a>  ||  <a href="#">Pobreza</a>  ||  <a href="#">Innovación</a>  ||  <a href="#">Desarrollo</a> <br> <a href="#">Género y Competitividad</a>  ||  <a href="#">Gobierno y Democracia</a></p>
+			<h4 align="center"><a href="http://ethos.org.mx" target="_blank">www.ethos.org.mx</a> </h4>
+			<p align="center" style="font-size:0.7em;">Enrique Rebsamen 1108, Col. del Valle, Del. Benito Juárez, México 03100<br>Tel. (55) 53350670</p>
+		</div>
+	</div>
+
+	<!--metod-modal-->
+	<div id="modal-metod" class="modal-demo" style="display: none;">
+		<div class="modalclose" onclick="Custombox.close();">
+			<span><h5>X</h5></span>
+		</div>
+		<div class="modaltext-met" > 
+			<h2>METODOLOGíA</h2>
+			<p>#Méxicoen140 surge con el objetivo de explorar una forma distinta de analizar
+				información que intercambian los principales líderes de opinión del país. Utilizando una herramienta de uso público (Twitter), se extraen y se proyectan las palabras con más menciones de una selección específica de cuentas. #Méxicoen140 permite al usuario descubrir a través de las palabras proyectadas, cuales son los temas de coyuntura en un determinado momento en México.</p>
+			<h3>Criterio para Selección de Cuentas</h3>
+			<p>Para reunir a las voces má influyentes del país, se elaboró una base de datos con múltiples cuentas activas de twitter. Con el propósito de clasificar dichas cuentas se crearon 8 categorías: Poder Ejecutivo, Senadores, Diputados, Gobernadores, Líderes de Opinión, PAN, PRI y PRD. Cada categoría está integrada por distintos grupos de cuentas.</p>
+			<ul>
+				<li><b>Poder ejecutivo:</b> incluye las cuentas institucionales de la presidencia, Presidente, miembros del gabinete presidencial, directores de instituciones de gobierno, gobernadores estatales y diversas dependencias del gobierno.</li>
+				<li><b>Senadores:</b> Incluye la cuenta institucional de la Cámara de Senadores y las cuentas personales de aquellos senadores activos en Twitter.
+				</li>
+				<li><b>Diputados:</b> Incluye la cuenta institucional de la Cámara de Diputados y las cuentas personales de aquellos diputados activos en Twitter.
+				</li>
+				<li><b>Líderes de Opinión:</b> Incluye cuentas institucionales de medios de comunicación, organizaciones de la sociedad civil e instituciones académicas, así como las cuentas personales de empresarios, periodistas, líderes de ONGs y Think Tanks, académicos, intelectuales, entre otros personajes activos y destacados.
+				</li>
+				<li><b>Gobernadores:</b> Incluye la cuenta de cada uno de los Gobernadores de las 32 entidades federativas.
+				</li>
+				<li><b>PRI:</b> Cuentas instiucionales y de personalidades destacadas del Partido Revolucionario Institucional.
+				</li>
+				<li><b>PAN:</b> Cuentas instiucionales y de personalidades destacadas del Partido Acción Nacional.
+				</li>
+				<li><b>PRD:</b> Cuentas instiucionales y de personalidades destacadas del Partido de la Revolución Democrática.
+				</li>
+				<li><b>Todos:</b> Esta categoría incluye a todas las cuentas incluidas en las otras categorías.
+				</li>
+			</ul>
+			<p>Los criterios generales para seleccionar las cuentas fueron:</p>
+			<ol>
+				<li>Pertenencia a alguna de las categorías establecidas.</li>
+				<li>Contar con una cuenta de Twitter activa (se entiende por cuenta activa a aquellas cuentas que tienen seguidores, emiten tweets con regularidad y son generadores de conversación, debate y contenido relevante. No es necesario cumplir con todos los criterios para ser considerado activo, pero sí con la mayoría)</li>
+				<li>Relevancia e influencia en el quehacer político del país.</li>
+			</ol>
+			<p>La autenticidad de cada una de las cuentas seleccionadas fue verificada y confirmada previamente a su inclusión en esta aplicación.</p>
+
+			<p>Los elementos de cada lista estan disponibles y pueden consultarse en el perfil de twitter asociado a la aplicacion en <a href="http://twitter.com/MX_en140/lists" target="_blank">twitter.com/MX_en140/lists/</a>. Los comentarios y sugerencias al respecto son bienvenidos a <a href="mailto:comunicacion@ethos.org.mx" target="_blank">comunicacion@ethos.org.mx</a>. </p>
+
+
+			<h3>Sistema</h3>
+			<p><b>Versión 2.0</b></p>
+			<p>El sistema recopila y registra continuamente los tuits generados por todas las cuentas incluidas en las distintas categorías.</p>
+			<p>Posteriormente se procesa el texto y se agrupan las palabras mencionadas con mayor frecuencia. Este grupo de palabras pasa por un filtro donde se descartan palabras que no aportan información significativa. Finalmente, las palabras son proyectadas a una visualización en que el tamaño y colores de las burbujas representa el número de menciones.</p>
+			<p>La aplicación se actualiza de manera continua reflejando la información recién generada por las cuentas monitoreadas. El conteo de palabras corresponde a un periodo de tiempo variable para cada categoría, segun la frecuencia de publicación de las cuentas corresponientes.</p>
+			<p><b>Créditos: </b> José Luis Chicoma (Ethos), Alejandra Brambila (Ethos),Ana Dávila (Ethos), Maricarment Medina Mora (Ethos), Cristina de Uriarte (Ethos) y Emmanuel Anguiano-Hernández (Overdriven Labs).</p>
+			<br><br>
+			<p align="center">(c) 2015 Todos los derechos reservados.<br>Ethos Laboratorio de Políticas Públicas<br> (Avance-Análisis Estudios e Investigación para el Desarrollo A.C.)</p>
+		</div>
+	</div>
+</div>
+
+    <!-- .. .. ... .. scripts callings .. .. ... .. -->
+	<script type="text/javascript" src="js/containers.js"></script>
+	<script type="text/javascript" src="js/data.js"></script>
+	<script type="text/javascript" src="js/jquery.min.js"></script>
+	<script type="text/javascript" src="js/jquery-2.1.4.min.js"></script>
+    <script type="text/javascript" src="js/jquery-ui.min.js"></script>
+    <script type="text/javascript" src="js/jquery.qtip.min.js"></script>
+    <script type="text/javascript" src="js/bootstrap.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="js/d3.min.js"></script>
+	<script type="text/javascript" src="js/custombox.min.js"></script>
+	<script type="text/javascript" src="js/colorstrip.js"></script>
+	<script type="text/javascript" src="js/client-app.js"></script>
+
+<!--end-->
+</body>
+</html>

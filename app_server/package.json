@@ -1,0 +1,16 @@
+{
+  "name": "mexicoen140",
+  "version": "1.0.0",
+  "description": "M-exico en 140 es una visualizaci-on de los t-opicos m-as importantes discutidos en Twitter por grupos de usuario influyentes en la escena pol-itica mexicana",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Emmanuel Anguiano-Hernández (Overdriven-Labs)",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.12.4",
+    "twitter": "^1.2.5",
+    "cool-ascii-faces": "^1.3.x"
+  }
+}

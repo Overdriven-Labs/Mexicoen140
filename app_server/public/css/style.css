@@ -1,0 +1,570 @@
+
+/* ------ ------ fonts and other misteries ------ ------ */
+* { 
+-moz-box-sizing: border-box; 
+-webkit-box-sizing: border-box; 
+box-sizing: border-box; 
+}
+
+@font-face {
+  font-family: SF Movie Poster;
+  src: url('SF Movie Poster Bold.ttf') format("truetype");
+}
+
+@font-face {
+  font-family: SF Movie;
+  src: url('SF Movie Poster.ttf') format("truetype");
+}
+
+@font-face {
+  font-family: coolvetica;
+  src: url('coolvetica_rg.ttf') format("truetype");
+}
+
+
+/*
+orange1: #FDD5C7;
+orange2: #F7A18B;
+orange3: #FE7459;
+gray1: #D3D3D2;
+gray2: #B6B7B5;
+gray3: #8C8C8B;
+*/
+
+
+/* ------ ------ header ------ ------ */
+.header {
+	margin-top: -0.3cm;
+}
+
+.titular {
+	font-size: 8.5em;
+	color: #58595B;
+	font-family: 'SF Movie Poster', helvetica;
+	font-style: bold;
+	/*float: block;*/
+	/*text-shadow: 2px 4px 0 rgba(0,0,0,0.4);*/
+}
+.titular:hover {
+    color: #A8A9AB;
+    text-decoration: none;
+}
+
+.logo-mx {
+}
+
+.logo-ethos {
+	padding-right: 0px;
+}
+
+/* ------ ------ navigation bar ------ ------ */
+.selec{
+    font-size:2.4em;
+    color: #4C4C4B;
+	font-family: 'SF Movie Poster', helvetica;
+	font-style: normal;
+	font-padding: 2px;
+}
+.selec:link {
+    color: #6C6C6B;
+    text-decoration: none;
+}
+.selec:visited {
+    color: #6C6C6B;
+    text-decoration: none;
+}
+.selec:hover {
+    color: #FE7459;
+    text-decoration: none;
+}
+.selec.active {
+    color: #FE7459;
+    text-decoration: none;
+}
+
+#colorstrip {
+    overflow: hidden;
+    position: relative;
+    height: 2px;
+    left: .4cm;
+    width: 85%;
+    align: center;
+    }
+
+.txtodo, .txejec, .txdipu, .txsena, .txgobe, .txopin, .txpri, .txpan, .txprd{
+	font-family: 'SF Movie Poster', helvetica;
+    color: #6C6C6B;
+    font-size: 1.6em;
+    cursor: pointer;
+    display: block;
+    float: left;  
+    z-index: 3;
+    position: absolute;
+    /*left: 3.3cm;
+    top: 4.6cm;*/
+    left: 1cm;
+    top:-0.2cm;
+}
+
+
+/* ------ ------ chart main section ------ ------ */
+#chart {
+	width: 100%;
+	text-align: center;
+	/*float: center;*/
+	font-family: 'SF Movie', helvetica;
+	font-style: normal;
+	color: #FFFFFF;
+	z-index: 100;
+}
+
+
+/* ----- some properties of circles ------ */
+circle {
+	-moz-transition: all 0.5s;
+	-o-transition: all 0.5s;
+	-webkit-transition: all 0.5s;
+	transition: all 0.5s;
+}
+
+.bubble:hover {
+	/*fill: #222222;*/
+	transform: scale(1.2);
+	border-radius: 45px 45px 45px 45px;
+	cursor: pointer;
+}
+
+
+
+
+
+/* ------ bubble styles ----- */
+.burb1 {
+	fill: #FDD5C7;
+	font-size: 2.1em;
+}
+
+.burb2 {
+	fill: #D3D3D2; 
+	font-size: 2.3em;
+}
+
+.burb3 { 
+	fill: #F7A18B;
+	font-size: 2.6em;
+}
+
+.burb4 { 
+	fill: #B6B7B5; 
+	font-size: 3em;
+}
+
+.burb5 {
+	fill: #FE7459;
+	font-size: 3.4em;
+}
+
+.burb6 {
+	fill: #8C8C8B; 
+	font-size: 3.8em;
+}
+
+.burb0 { 
+	fill: #FFF8EF; 
+	font-size: 1.6em;
+}
+
+
+/* legend panel */
+#infoblock-check{	
+	font-size: 2em;
+	background-color: #F7A18B;
+	font-color: #FFFFFF;
+	height: 120px;
+	width: 55px;
+	position: relative;
+	text-align: left;
+	padding-left: 8px;
+	padding-top: 40px;
+	right: -120px;
+	opacity: 0.85;
+	border-radius: 15px;
+	}
+
+#infoblock-info{
+	font-size: 2em;
+	background-color: #FE7459;
+	color: #FFFFFF;
+	height: 120px;
+	width: 55px;
+	position: relative;
+	text-align: left;
+	padding-left: 7px;
+	padding-top: 40px;
+	right: -120px;
+	opacity: 0.85;
+	border-radius: 15px;    
+	}
+
+#infoblock-metod{	
+	font-size: 1em;
+	background-color: #B6B7B5;
+	font-color: #FFFFFF;
+	height: 40px;
+	width: 120px;
+	position: relative;
+	text-align: left;
+	padding-left: 15px;
+	padding-top: 2px;
+	right: -55px;
+	opacity: 0.50;
+	border-radius: 15px;
+	}
+
+
+#text-check {
+    width: 160px;
+    height: 120px;
+	padding-top: 0.2cm;
+    font-family: 'coolvetica', helvetica;
+	font-style: bold;
+    font-size: 0.7em;
+	color: #FFFFFF;
+	text-align: center;
+}
+
+#text-info {
+    width: 160px;
+    height: 120px;
+	padding-top: 0.2cm;
+    font-family: 'coolvetica', helvetica;
+    font-size: 0.7em;
+	color: #FFFFFF;
+	text-align: center;
+}
+
+#text-metod {
+	font-family: 'SF Movie Poster', helvetica;
+    font-size: 1.4em;
+    color: #FFFFFF;
+}
+
+#text-metod:hover{
+	color: #FFFFFF;
+    text-decoration: none;
+}
+#text-metod:visited{
+	color: #EEEEEE;
+    text-decoration: none;
+}
+
+
+/* ---- ----- ----- ------ ------- --- */
+body {
+    /*background: #FFF6EA;*/
+    background: #FAF1EC;
+    font-family: 'coolvetica', helvetica;
+    color: #FAF1EC;
+    font-color: #FFFFFF;
+    width: 100%;
+    height: 100%;
+    margin: 0px;
+    padding: 0px;
+    overflow-x: hidden;
+}
+
+
+footer {
+	background-color: #FFFFFF;
+	color: #A0A0A0;
+	height: 150px;
+	font-family: 'coolvetica', helvetica;
+	font-size: 0.80em;
+}
+
+.foot1{
+	position: relative;
+	text-align: left;
+	left: 0.5cm;
+}
+
+.foot2{
+	position: relative;
+	text-align: right;
+	right: 0.3cm;
+	bottom:0.2cm;
+}
+
+.link-eth{
+	color: #808080;
+	font-size: 1.4em;
+	font-style: normal;
+}
+.link-eth:hover{
+	color: #A0A0A0;
+    text-decoration: none;
+}
+.link-eth:visited{
+	color: #A0A0A0;
+    text-decoration: none;
+}
+
+
+/* ------ style of other sections ----- */
+.othertext{
+	color: #58595B;
+    font-size: 2em;
+	font-family: 'SF Movie', helvetica;
+	}
+
+
+.gross {
+	color: #FFFF00;
+	/*background-color:#FFFF00;*/
+}
+
+
+/* -------------hidden FOREST -----------------*/
+#tooltip{
+	position: absolute;
+	z-index:9999;
+	visibility: hidden;
+	padding-left: 10px;
+	padding-right: 10px;
+	border-radius: 10px;
+	font-family: "SF Movie Poster", helvetica;
+	text-align: center;
+	color: white;
+	background-color: #000000;
+	opacity: 0.7;
+	font-size: 2.2em ;
+}
+
+#circe{
+	position: absolute;
+	height:100px;
+	width: 100px;
+}
+/* -------------qtip -----------------*/
+.qtip-mx{
+    z-index: 1;
+    background-color: rgba(213,211,213,0.85);
+    border-radius: 20px;
+    border-color: #D5D3D5;
+}
+
+.qtip-content{
+    font-family: 'coolvetica', helvetica;
+    font-size: 12px;
+    z-index: 1;
+    height: 500px; 
+    overflow: auto;
+}
+
+.qtip{
+	z-index: 100;
+	padding: 8px;
+}
+
+.qtip-default{
+	z-index: 2;
+}
+
+.qtip-content::selection {
+  background: ##FE7459;
+}
+
+/* -------------tweet containers -----------------*/
+/*.tooltiphead{
+	position:relative;
+}
+.toptitle{
+	z-index: 10;
+	position:relative;
+	background-color: #000;
+	border-radius: 20px 20px 0px 0px;
+	padding-top: -0.5cm;
+}*/
+
+
+.name{
+	font-family: 'coolvetica', helvetica;
+    color: #000;
+    padding-top: 0.1cm;
+    font-size:1.2em;
+    float:left;
+}
+.name:hover{
+	color: #FFF;
+	text-decoration: none;
+}
+.name:visited{
+	color: #000;
+	text-decoration: none;
+}
+
+.tweettext{
+	text-align: left;
+}
+
+
+.twcontainer{
+	font-family: 'coolvetica', helvetica;
+    padding-top: 4px;
+    font-size:13px;
+    opacity: 0.9;
+    z-index: 5;
+  	line-height: 110%
+
+}
+
+.twcontainer img{
+    border-radius: 15px;
+}
+
+.spantitle{
+	font-family: 'SF Movie Poster', helvetica;
+    color: #4C4C4B;
+    font-color: #4C4C4B;
+    font-size:3.2em;
+    float: left;
+    display: block;
+    margin-top: 0.22cm;	
+}
+.spantitle:hover{
+	color: #FE7459;
+    text-decoration: none;
+}
+.spantitle:visited{
+	color: #4C4C4B;
+    text-decoration: none;
+}
+
+.spancount{
+	font-family: 'SF Movie Poster', helvetica;
+    color: #4C4C4B;
+    font-color: #4C4C4B;
+    font-padding: 2;
+    font-size:2em;
+    float: right;
+    font-style: normal;
+}
+
+.spanmenc{
+	font-family: 'SF Movie Poster', helvetica;
+    color: #4C4C4B;
+    font-color: #4C4C4B;
+    font-padding: 2;
+    font-size:1.3em;
+    float: right;
+    font-style: normal;
+}
+
+.screenname{
+    float: left;
+}
+.createdtime{
+    float: right;
+}
+
+p > a{
+	color: #A0A0A0;
+    text-decoration: none;
+}
+p > a:hover{
+	color: #4C4C4B;
+    text-decoration: none;
+}
+p > a:active{
+	color: #4C4C4B;
+    text-decoration: none;
+}
+
+h4 > a{
+	color: #4C4C4B;
+    text-decoration: none;
+}
+h4 > a:hover{
+	color: #A0A0A0;
+    text-decoration: none;
+}
+h4 > a:active{
+	color: #4C4C4B;
+    text-decoration: none;
+}
+
+td > span >a{
+	color: #8C8C8B;
+    text-decoration: none;
+}
+td > span > a:hover{
+	color: #FE7459;
+    text-decoration: none;
+}
+td > span > a:active{
+	color: #FDD5C7;
+    text-decoration: none;
+}
+
+.twend{
+	font-family: 'SF Movie Poster', helvetica;
+    color: #4C4C4B;
+    font-color: #4C4C4B;
+    font-size:2em;
+    float: left;
+    display: block;
+}
+
+.ender1{
+	font-family: 'SF Movie Poster', helvetica;
+	font-size:1.5em;
+	font-style: underline;
+}
+
+.ender2{
+	line-height: 110%
+}
+
+
+/* -------------modals -----------------*/
+#modal-eth {
+	width: 410px;
+	opacity: 0.8;
+}
+
+#modal-metod {
+    width: 700px;
+	opacity: 0.8;    
+}
+
+
+.modal-demo {
+    font-style: 'coolvetica', helvetica;
+    color: #767775;
+    background-color: #E6E7E5;
+    border: #767775 solid 4px;
+    border-radius: 20px;
+    box-shadow: 0 8px 6px -6px black;
+    text-align: left;
+    display: none;
+}
+
+.modaltext-eth {
+    padding: 20px 20px 20px 20px;
+    overflow: auto;
+}
+.modaltext-met {
+    margin: 20px 10px 30px 25px;
+    height: 500px; 
+    overflow: auto;
+}
+.modalclose {
+    position: absolute;
+    top: 3px;
+    right: 15px;
+}
+
+h2, h3{
+	font-family: 'SF Movie Poster', helvetica;
+	font-size: 3em;
+}
